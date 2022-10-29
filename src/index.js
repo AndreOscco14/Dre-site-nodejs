@@ -25,5 +25,5 @@ app.use(indexRoutes);
 // static files
 app.use(express.static(join(__dirname, 'public')))
 
-app.listen(3000);
-console.log('Servidor desplegado on port', 3000);
+app.listen(process.env.PORT || 3000);
+console.log('Servidor desplegado on port', process.env.PORT || 3000);
